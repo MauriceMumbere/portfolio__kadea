@@ -1,0 +1,303 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #262626;
+}
+body{
+    max-width: 1350px;
+    padding: 0 100px;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.5rem;
+}
+/********************\
+    Hader style
+\********************/
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+.header__logo{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.header__menu ul{
+    display: flex;
+    list-style: none;
+}
+.header__menu ul li:not(:first-child)::before{
+    content: "|";
+    padding: 0 15px;
+}
+/********************\
+    Home-page style
+\********************/
+.home-page{
+    display: flex;
+    justify-content: center;
+    padding: 5.5% 30%;
+    gap: 15%;
+}
+.home-page__img{
+    width: 350px;
+}
+.home-page__h1{
+    font-size: 3rem;
+}
+.home-page__h3{
+    padding-top: 20px;
+}
+.home-page__p{
+    padding-top: 10px;
+}
+.home-page__link{
+    display: flex;
+    gap: 20px;
+    padding-top: 40px;
+}
+.btn{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border: 1px solid #262626;
+    cursor: pointer;
+}
+.bg-yello{
+    background-color: rgb(238, 163, 2);
+}
+.bg-red{
+    background-color: rgb(225, 59, 37);
+}
+.bg-blue{
+    background-color: rgb(91, 241, 234);
+}
+/************************\
+    Cv-page style
+\************************/
+.cv-page{
+    padding: 40px 0 100px 30px;
+    line-height: 2rem;
+}
+.cv-page__h2{
+    padding: 40px 0;
+}
+.cv-page__h3{
+    padding-bottom: 40px;
+}
+.cv-page__p{
+    padding: 10px 0;
+}
+.cv-page__article{
+    padding-bottom: 40px;
+}
+.cv-page__ul{
+    padding-left: 20px;
+}
+.cv-page__flex{
+    display: flex;
+    justify-content: space-between;
+}
+/************************\
+    Projects-page style
+\************************/
+.projets-page{
+    padding: 40px 0 40px 80px;
+}
+.projets-page__h2{
+    padding-bottom: 5%;
+}
+.projets-page__h3{
+    padding-bottom: 10px;
+}
+.projets-page__card{
+    display: flex;
+    gap: 15%;
+    margin-bottom: 4%;
+}
+/************************\
+    Contact-page style
+\************************/
+.contact-page{
+    display: flex;
+    justify-content: space-between;
+    padding: 5% 7%;
+}
+.contact-page__h3{
+    padding-bottom: 0.8rem;
+}
+.contact-page__form--card{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.contact-page__address{
+    padding: 40px 0;
+    font-style: normal;
+}
+.contact-page__input{
+    padding: 5px;
+    flex: 1;
+}
+.contact-page__textarea{
+    height: 120px;
+    width: 190px;
+    resize: none;
+}
+.contact-page__input, 
+.contact-page__textarea{
+    border: 2px solid rgba(0, 0, 0, 0.705);
+    padding: 10px;
+    margin: 1rem 0;
+}
+.contact-page__submit{
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border: 1px solid #262626;
+    cursor: pointer;
+}
+.contact-page__input,
+.contact-page__textarea,
+.contact-page__submit{
+    outline: none;
+}
+/********************\
+    Footer style
+\********************/
+.footer{
+    display: flex;
+    gap: 15%;
+    border-top: 1px solid rgba(0, 0, 0, 0.205);
+    padding: 16px  0;
+}
+.footer__address{
+    font-style: normal;
+}
+.footer__h3{
+    padding-bottom: 10px;
+    font-size: 1rem;
+}
+.footer__p{
+    font-size: 0.8rem;
+}
+/*****************************\
+    Responsive on small mobile
+\*****************************/
+@media screen and (max-width:375px) {
+    .home-page__link{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+/************************\
+    Responsive on mobile
+\************************/
+@media screen and (max-width:425px) {
+    .header{
+        flex-direction: column;
+        text-align: center;
+    }
+    .header__menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3rem;
+    }
+    .home-page{
+        flex-direction: column;
+        text-align: center;
+    }
+    .home-page__h1{
+        padding-top: 2rem;
+    }
+    .home-page__link{
+        justify-content: center;
+    }
+    .projets-page__card{
+        flex-direction: column-reverse;
+    }
+    .projets-page__h2{
+        text-align: center;
+        padding-bottom: 2rem;
+    }
+    .projets-page__h3{
+        padding-bottom: 1.2rem;
+    }
+    .projets-page__p{
+        padding-top: 0.8rem;
+    }
+    .cv-page__h4{
+        font-size: 0.8rem;
+    }
+    .cv-page__span{
+        font-size: 0.6rem;
+    }
+    .contact-page__form--card{
+        flex-direction: column;
+    }
+    .contact-page__coordinates{
+        text-align: center;
+    }
+    .contact-page__form{
+        text-align: center;
+        margin-top: 3rem;
+    }
+    .contact-page{
+        flex-direction: column;
+    }
+    .projets-page__card{
+        margin-bottom: 50px;
+    }
+    .footer{
+        flex-direction: column;
+        text-align: center;
+        padding-top: 40px;
+    }
+}
+/************************\
+    Responsive on tablette
+\************************/
+@media screen and (max-width:768px) {
+    .home-page,
+    .cv-page,
+    .projets-page,
+    .contact-page{
+        padding-left: 0;
+        padding-right:0 ;
+    }
+    .home-page__img{
+        width: 260px;
+    }
+    .btn{
+        width: 80px;
+        height: 80px;
+    }
+    .projets-page__card{
+        gap: 5%;
+    }
+    .footer{
+        gap: 50px;
+    }
+}
+/************************\
+    Responsive on laptop
+\************************/
+@media screen and (max-width:1280px) {
+    body{
+        padding: 2%;
+    }
+    .projets-page__img{
+        width: 100%;
+    }
+}

@@ -37,19 +37,20 @@ body{
 .home-page{
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 5.5% 30%;
     gap: 15%;
 }
 .home-page__img{
     width: 350px;
 }
-.home-page__h1{
+.home-page__content__h1{
     font-size: 3rem;
 }
-.home-page__h3{
+.home-page__content__h3{
     padding-top: 20px;
 }
-.home-page__p{
+.home-page__content__p{
     padding-top: 10px;
 }
 .home-page__link{
@@ -199,6 +200,13 @@ body{
         justify-content: center;
         align-items: center;
     }
+    .home-page{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .home-page__img{
+        width: 270px;
+    }
 }
 /************************\
     Responsive on mobile
@@ -235,7 +243,7 @@ body{
         padding-bottom: 1.2rem;
     }
     .projets-page__p{
-        padding-top: 0.8rem;
+        padding-top: 0.9rem;
     }
     .cv-page__h4{
         font-size: 0.8rem;
@@ -269,15 +277,21 @@ body{
     Responsive on tablette
 \************************/
 @media screen and (max-width:768px) {
-    .home-page,
     .cv-page,
     .projets-page,
     .contact-page{
         padding-left: 0;
         padding-right:0 ;
     }
-    .home-page__img{
-        width: 260px;
+    .home-page{
+        flex-direction: column;
+        text-align: center;
+    }
+    .home-page__link{
+        justify-content: center;
+    }
+    .home-page__content{
+        margin-top: 10%;
     }
     .btn{
         width: 80px;
